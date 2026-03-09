@@ -17,6 +17,23 @@ Desarrollar un sistema capaz de conectar perfiles de usuarios con caballos y ser
 * **Visualización:** Matplotlib, Seaborn
 * **Entorno:** Jupyter Notebooks
 
+## 📂 Estructura del Proyecto
+
+El repositorio está organizado para reflejar el flujo de trabajo de Ciencia de Datos, desde la experimentación hasta la preparación para producción:
+
+### 📓 Notebooks (Experimentación y EDA)
+* **02_Segmentacion_Equina.ipynb:** Análisis exploratorio y segmentación inicial de los perfiles hípicos.
+* **03_Motor_Recomendacion.ipynb:** Desarrollo y testeo del algoritmo de recomendación núcleo.
+* **04_Preparacion_API:** Preparación de la lógica para su integración con servicios externos.
+
+### ⚙️ Scripts (Core del Motor - `src/experiments/engine`)
+Para asegurar la escalabilidad, se modularizó la lógica en scripts de Python:
+* **features.py:** Ingeniería de variables y preprocesamiento.
+* **model.py:** Definición de la arquitectura del modelo de recomendación.
+* **train.py:** Pipeline de entrenamiento y ajuste de parámetros.
+* **experiment_knn.py:** Pruebas específicas con el algoritmo K-Nearest Neighbors para similitud.
+* **metrics.py:** Scripts para el cálculo de precisión y distancias.
+
 ## 📊 Análisis de Resultados y Validación
 
 Para garantizar la precisión del motor de recomendación, se generaron visualizaciones que validan la lógica del modelo:
